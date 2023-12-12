@@ -1,0 +1,37 @@
+/* Estilos generales */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: beige; /* Fondo beige */
+}
+
+/* Contenedor para el video y la imagen */
+#contenedorPrincipal {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Estilos para el video */
+#videoPrincipal {
+    width: 95vw; /* Ancho del video al 95% del ancho de la ventana */
+    height: 95vh; /* Altura del video al 95% de la altura de la ventana */
+    object-fit: cover; /* Asegura que el video cubra el espacio asignado */
+}
+
+/* Estilos para la imagen/botón */
+#imagenBoton {
+    max-width: 100%; /* Asegura que la imagen no sea más grande que su contenedor */
+    cursor: pointer;
+}
+
+/* Estilo para el enlace que contiene la imagen */
+#linkImagen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,37 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: beige; 
+}
+
+
+#contenedorPrincipal {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+#videoPrincipal {
+    width: 95vw; 
+    height: 95vh; 
+    object-fit: cover; 
+}
+
+
+#imagenBoton {
+    max-width: 100%; 
+    cursor: pointer;
+}
+
+
+#linkImagen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

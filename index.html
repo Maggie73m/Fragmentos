@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eje 7</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    
+    <div id="contenedorPrincipal">
+
+        
+        <video id="videoPrincipal" autoplay controls>
+            <source src="video/yo.mp4" type="video/mp4"> 
+            Tu navegador no soporta videos HTML5.
+        </video>
+
+        
+        <a href="html/habitacion.html" style="display: none;" id="linkImagen"> 
+            <img id="imagenBoton" src="img/si.jpg"> 
+        </a>
+
+    </div>
+
+    <!--miniJava-->
+    <script>
+        var video = document.getElementById('videoPrincipal');
+        var linkImagen = document.getElementById('linkImagen');
+
+        video.onended = function() {
+            video.style.display = 'none'; 
+            linkImagen.style.display = 'block'; 
+        };
+    </script>
+
+</body>
+</html>

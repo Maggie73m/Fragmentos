@@ -1,0 +1,75 @@
+/* Estilo general del cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Evita el desbordamiento del contenido */
+}
+
+/* Estilo para la imagen que parece fondo pero es un elemento img */
+.imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Estilo para las imágenes de los botones */
+.boton-imagen {
+    position: absolute;
+    cursor: pointer;
+}
+
+/* Estilos individuales para los botones */
+.boton-calle {
+    top: 5%; 
+    right: 15%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.boton-bar {
+    top: 40%; 
+    right: 5%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.boton-casa-suegra {
+    top: -1%; 
+    left: 5%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.boton-procu {
+    top: 40%; 
+    left: 5%;
+    position: absolute;
+    cursor: pointer;
+}
+
+/* Ajuste de tamaño para cada imagen de botón de forma individual */
+.boton-calle img {
+    width: 120px; /* Tamaño específico para el botón 'calle' */
+    height: auto;
+}
+
+.boton-bar img {
+    width: 140px; /* Tamaño específico para el botón 'bar' */
+    height: auto;
+}
+
+.boton-casa-suegra img {
+    width: 160px; /* Tamaño específico para el botón 'casa-suegra' */
+    height: auto;
+}
+
+.boton-procu img {
+    width: 180px; /* Tamaño específico para el botón 'procu' */
+    height: auto;
+}

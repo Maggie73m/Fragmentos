@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>BAR</title>
+    <link rel="stylesheet" href="../css/style-procu.css">
+</head>
+<body>
+
+   
+    <img class="imagen-fondo" src="../img/fondo2.jpg" alt="Fondo">
+
+    <!-- Botones de popups -->
+    <div class="boton-imagen boton-calle" onclick="openPopup('popup-calle')">
+        <img src="../img/1.jpg" alt="Ir a la Calle">
+    </div>
+    <div class="boton-imagen boton-bar" onclick="openPopup('popup-bar')">
+        <img src="../img/fondo1.jpeg" alt="Ir al Bar">
+    </div>
+    <div class="boton-imagen boton-casa-suegra" onclick="openPopup('popup-casa-suegra')">
+        <img src="../img/imagen1.jpg" alt="Ir a la Casa de la Suegra">
+    </div>
+    <div class="boton-imagen boton-procu" onclick="openPopup('popup-procu')">
+        <img src="../img/si.jpg" alt="Ir a la Procuraduría">
+    </div>
+
+    <!-- Pop-up Contenedores :D -->
+    <div id="popup-calle" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-calle')">&times;</span>
+            <img src="../img/pop.jpg" alt="Detalle de Calle">
+        </div>
+    </div>
+
+    
+    <div id="popup-bar" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-bar')">&times;</span>
+            <img src="../img/pop.jpg" alt="Detalle del Bar">
+        </div>
+    </div>
+
+    
+    <div id="popup-casa-suegra" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-casa-suegra')">&times;</span>
+            <img src="../img/pop.jpg" alt="Detalle de Casa Suegra">
+        </div>
+    </div>
+
+  
+    <div id="popup-procu" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-procu')">&times;</span>
+            <img src="../img/pop.jpg" alt="Detalle de la Procuraduría">
+        </div>
+    </div>
+
+
+    <script src="../js/popups.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+/* Estilos jiji */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; 
+}
+
+
+.imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.boton-imagen {
+    position: absolute;
+    cursor: pointer;
+}
+
+
+.boton-calle {
+    top: 15%; 
+    right: 15%;
+    position: absolute;
+    cursor: pointer;
+    width: 300px; 
+    height: auto; 
+}
+
+.boton-bar {
+    top: 40%; 
+    right: 5%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.boton-casa-suegra {
+    top: 10%; 
+    left: 12%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.boton-procu {
+    top: 50%; 
+    left: 5%;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+.boton-calle img {
+    width: 250px; 
+    height: auto;
+}
+
+.boton-bar img {
+    width: 250px; 
+    height: auto;
+}
+
+.boton-casa-suegra img {
+    width: 200px; 
+    height: auto;
+}
+
+.boton-procu img {
+    width: 180px; 
+    height: auto;
+}
+
+.popup-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 10;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenido del pop-up */
+.popup-content {
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+}
+.popup-content {
+    position: relative;
+    padding: 10px;
+    background-color:  rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    max-width: 40%; 
+    max-height: 70vh; 
+    overflow: auto; 
+    box-sizing: border-box;
+}
+
+
+.popup-content img {
+    width: 100%; 
+    height: auto;
+    display: block; 
+}
+#Carmen {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer; /* Para indicar que es clickeable */
+}
+#Carmen img {
+    width: 300px; /* Cambia este valor para ajustar el ancho */
+    height: auto; /* Esto mantendrá la proporción de la imagen */
+}
+/* Estilo para la imagen "texto" que aparece como popup */
+#texto {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 300px; /* Ajusta el tamaño como desees */
+    height: auto;
+    display: none; /* Inicialmente oculta */
+}
+.popup-content video {
+    width: 100%; /* Ajusta el ancho como desees */
+    max-width: 600px; /* O un valor máximo si es necesario */
+    /* Agrega aquí más estilos si lo necesitas */
+}
+.boton-imagen:hover {
+    transform: scale(1.1); /* Hace el botón un poco más grande */
+    transition: transform 0.3s ease; /* Añade una transición suave */
+    /* Puedes agregar otros efectos como sombra, cambio de color, etc. */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ejemplo de sombra */
+}

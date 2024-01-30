@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINAL</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Courier New', monospace;
+      font-size: 26px;
+      line-height: 1.5;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #textoContainer {
+      cursor: pointer; /* Cambiar el cursor a estilo "manita" */
+    }
+
+    #textoActual {
+      opacity: 1; /* Inicialmente visible */
+      transition: opacity 1s ease-in-out; /* Transición de opacidad */
+    }
+
+    #continuarLink {
+      display: none; /* Inicialmente oculto */
+      opacity: 0; /* Inicialmente transparente */
+      transition: opacity 1s ease-in-out; /* Transición de opacidad */
+    }
+  </style>
+</head>
+<body>
+  <div id="textoContainer" onclick="mostrarSiguienteTexto()">
+    <span id="textoActual">...</span>
+  </div>
+
+  <!-- Enlace oculto -->
+  <a id="continuarLink" href="../html/procu.html">Fin de la conversación. </a>
+
+  <script>
+    var textos = [
+      "Ya puedes pasar",
+      "Anque, no se porque tanta insistencia",
+      "Solo para reconocer un cuerpo",
+      "Recuerda que, te estoy hechando la mano ",
+      "Haber luego con que nos arreglamos"
+    ];
+
+    var indiceTextoActual = 0;
+    var clicHabilitado = true;
+
+    function mostrarSiguienteTexto() {
+      if (!clicHabilitado) {
+        return;
+      }
+
+      clicHabilitado = false;
+
+      var textoContainer = document.getElementById("textoActual");
+      var continuarLink = document.getElementById("continuarLink");
+
+      // Oculta el texto actual con una transición de opacidad
+      textoContainer.style.opacity = 0;
+
+      // Espera a que termine la transición antes de cambiar el texto
+      setTimeout(function() {
+        if (indiceTextoActual < textos.length) {
+          textoContainer.innerHTML = ""; // Limpiar el contenido actual
+          escribirTexto(textos[indiceTextoActual], textoContainer);
+          indiceTextoActual++;
+        } else {
+          textoContainer.innerHTML = "";
+          // Muestra el enlace con una transición de opacidad
+          continuarLink.style.display = "inline";
+          setTimeout(function() {
+            continuarLink.style.opacity = 1;
+            clicHabilitado = true; 
+          }, 100); 
+        }
+
+        
+        textoContainer.style.opacity = 1;
+      }, 1000); 
+    }
+
+    function escribirTexto(texto, container) {
+      container.innerHTML = ""; 
+      var i = 0;
+      var intervalo = setInterval(function() {
+        container.innerHTML += texto[i];
+        i++;
+        if (i == texto.length) {
+          clearInterval(intervalo);
+          clicHabilitado = true; 
+        }
+      }, 100);
+    }
+  </script>
+</body>
+</html>

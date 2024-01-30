@@ -8,21 +8,31 @@
 <body>
 
     <!-- Imagen que parece fondo pero es un elemento img -->
-    <img class="imagen-fondo" src="../img/fondo1.jpeg" alt="Fondo">
+    <img class="imagen-fondo" src="../img/fondo1.png" alt="Fondo">
 
     <!-- Botones de imagen -->
     <a href="calle.html" class="boton-imagen boton-calle">
-        <img src="../img/1.jpg" alt="Ir a la Calle">
+        <img src="../img/paraCalle.png" alt="Ir a la Calle">
     </a>
     <a href="bar.html" class="boton-imagen boton-bar">
-        <img src="../img/fondo1.jpeg" alt="Ir al Bar">
+        <img src="../img/paraBar.png" alt="Ir al Bar">
     </a>
     <a href="casa-suegra.html" class="boton-imagen boton-casa-suegra">
-        <img src="../img/imagen1.jpg" alt="Ir a la Casa de la Suegra">
+        <img src="../img/paraCasa.png" alt="Ir a la Casa de la Suegra">
     </a>
     <a href="procu.html" class="boton-imagen boton-procu">
-        <img src="../img/si.jpg" alt="Ir a la Procuraduría">
+        <img src="../img/si.jpeg" alt="Ir a la Procuraduría">
     </a>
 
+   <!-- Botón de imagen "Carmen" -->
+<div id="Carmen" class="boton-imagen" onclick="showImageForSixSeconds('texto')">
+    <img src="../img/Carmen1.png" alt="Botón Carmen">
+</div>
+
+<!-- Imagen "texto" que aparece como popup -->
+<img id="texto" src="../img/dial.png" alt="Imagen Popup" style="display: none;">
+
+
+    <script src="../js/popups.js"></script>
 </body>
 </html>

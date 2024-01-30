@@ -3,40 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>BAR</title>
-    <link rel="stylesheet" href="../css/style-procu.css">
+    <link rel="stylesheet" href="../css/style-bar.css">
 </head>
 <body>
 
    
-    <img class="imagen-fondo" src="../img/fondo2.jpg" alt="Fondo">
+    <img class="imagen-fondo" src="../img/fondo-bar.jpg" alt="Fondo">
 
     <!-- Botones de popups -->
     <div class="boton-imagen boton-calle" onclick="openPopup('popup-calle')">
-        <img src="../img/1.jpg" alt="Ir a la Calle">
+        <img src="../img/bar-1.jpg" alt="Info cajetilla"><!-- Pop up video -->
     </div>
-    <div class="boton-imagen boton-bar" onclick="openPopup('popup-bar')">
-        <img src="../img/fondo1.jpeg" alt="Ir al Bar">
-    </div>
+    <a href="final.html" class="boton-imagen boton-bar">
+        <img src="../img/Camilo.png" alt="Ir al Bar">
+    </a>
     <div class="boton-imagen boton-casa-suegra" onclick="openPopup('popup-casa-suegra')">
-        <img src="../img/imagen1.jpg" alt="Ir a la Casa de la Suegra">
+        <img src="../img/bar-3.png" alt="Ir a la Casa de la Suegra">  <!-- Labial para poemaAUDIO :D -->
     </div>
     <div class="boton-imagen boton-procu" onclick="openPopup('popup-procu')">
-        <img src="../img/si.jpg" alt="Ir a la Procuraduría">
+        <img src="../img/bar-2.png" alt="Ir a la Procuraduría">
     </div>
+
+    <div id="Carmen" class="boton-imagen" onclick="showImageForSixSeconds('texto')">
+        <img src="../img/Carmen5.png" alt="Botón Carmen">
+    </div>
+    
+    <!-- Imagen "texto" que aparece como popup -->
+    <img id="texto" src="../img/dialBar.png" alt="Imagen Popup" style="display: none;">
+  
+
 
     <!-- Pop-up Contenedores :D -->
     <div id="popup-calle" class="popup-container">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup-calle')">&times;</span>
-            <img src="../img/pop.jpg" alt="Detalle de Calle">
+            <!-- Reemplaza o complementa esta parte con un video -->
+            <video controls>
+                <source src="../video/chabela.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
         </div>
     </div>
+    
 
     
     <div id="popup-bar" class="popup-container">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup-bar')">&times;</span>
-            <img src="../img/pop.jpg" alt="Detalle del Bar">
+            <img src="../img/bar-2.1.png" alt="numero pista">
         </div>
     </div>
 
@@ -44,15 +58,19 @@
     <div id="popup-casa-suegra" class="popup-container">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup-casa-suegra')">&times;</span>
-            <img src="../img/pop.jpg" alt="Detalle de Casa Suegra">
+            <!-- Reemplaza o complementa esta parte con audio -->
+            <audio controls>
+                <source src="../audio/carmen.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
         </div>
     </div>
-
+    
   
     <div id="popup-procu" class="popup-container">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup-procu')">&times;</span>
-            <img src="../img/pop.jpg" alt="Detalle de la Procuraduría">
+            <img src="../img/bar-2.1.png" alt="Detalle de la Procuraduría">
         </div>
     </div>
 

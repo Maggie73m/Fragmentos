@@ -6,33 +6,39 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    
     <div id="contenedorPrincipal">
-
-        
         <video id="videoPrincipal" autoplay controls>
             <source src="video/yo.mp4" type="video/mp4"> 
-            Tu navegador no soporta videos HTML5.
+            
         </video>
 
-        
+        <!-- Botón para omitir el video -->
+        <button id="botonOmitir" style="position: absolute; top: 10px; right: 10px;">Omitir</button>
+
         <a href="html/habitacion.html" style="display: none;" id="linkImagen"> 
-            <img id="imagenBoton" src="img/si.jpg"> 
+            <img id="imagenBoton" src="img/si.jpeg"> 
         </a>
-
     </div>
+   
 
-    <!--miniJava-->
+
+    <!-- Script para controlar el video y el botón -->
     <script>
         var video = document.getElementById('videoPrincipal');
         var linkImagen = document.getElementById('linkImagen');
+        var botonOmitir = document.getElementById('botonOmitir');
 
         video.onended = function() {
             video.style.display = 'none'; 
             linkImagen.style.display = 'block'; 
+            botonOmitir.style.display = 'none'; 
+        };
+
+        botonOmitir.onclick = function() {
+            video.style.display = 'none';
+            linkImagen.style.display = 'block';
+            botonOmitir.style.display = 'none'; 
         };
     </script>
-
 </body>
 </html>

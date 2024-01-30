@@ -27,7 +27,7 @@ body {
 /* Estilos individuales para los botones */
 .boton-calle {
     top: 5%; 
-    right: 15%;
+    right: 40%;
     position: absolute;
     cursor: pointer;
 }
@@ -47,29 +47,59 @@ body {
 }
 
 .boton-procu {
-    top: 40%; 
-    left: 5%;
+    top: 60%; 
+    left: 20%;
     position: absolute;
     cursor: pointer;
 }
 
 /* Ajuste de tamaño para cada imagen de botón de forma individual */
 .boton-calle img {
-    width: 120px; /* Tamaño específico para el botón 'calle' */
+    width: 180px; /* Tamaño específico para el botón 'calle' */
     height: auto;
 }
 
 .boton-bar img {
-    width: 140px; /* Tamaño específico para el botón 'bar' */
+    width: 300px; /* Tamaño específico para el botón 'bar' */
     height: auto;
 }
 
 .boton-casa-suegra img {
-    width: 160px; /* Tamaño específico para el botón 'casa-suegra' */
+    width: 300px; /* Tamaño específico para el botón 'casa-suegra' */
     height: auto;
 }
 
 .boton-procu img {
     width: 180px; /* Tamaño específico para el botón 'procu' */
     height: auto;
+}
+
+/* Estilo para el botón "Carmen" */
+#Carmen {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer; /* Para indicar que es clickeable */
+}
+#Carmen img {
+    width: 300px; /* Cambia este valor para ajustar el ancho */
+    height: auto; /* Esto mantendrá la proporción de la imagen */
+}
+/* Estilo para la imagen "texto" que aparece como popup */
+#texto {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 300px; /* Ajusta el tamaño como desees */
+    height: auto;
+    display: none; /* Inicialmente oculta */
+}
+.boton-imagen:hover {
+    transform: scale(1.1); /* Hace el botón un poco más grande */
+    transition: transform 0.3s ease; /* Añade una transición suave */
+    /* Puedes agregar otros efectos como sombra, cambio de color, etc. */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ejemplo de sombra */
 }

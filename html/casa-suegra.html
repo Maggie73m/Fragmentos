@@ -3,48 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>CasaSuegra</title>
-    <link rel="stylesheet" href="../css/style-procu.css">
+    <link rel="stylesheet" href="../css/style-casa.css">
 </head>
 <body>
 
    
-    <img class="imagen-fondo" src="../img/fondo2.jpg" alt="Fondo">
+    <img class="imagen-fondo" src="../img/fondo-casa.jpg" alt="Fondo">
 
     <!-- Botones de popups -->
     <div class="boton-imagen boton-calle" onclick="openPopup('popup-calle')">
-        <img src="../img/1.jpg" alt="Ir a la Calle">
+        <img src="../img/casa-1.png" alt="Sueter"> <!-- Botón para abrir carrusel de imagenes -->
     </div>
     <div class="boton-imagen boton-bar" onclick="openPopup('popup-bar')">
-        <img src="../img/fondo1.jpeg" alt="Ir al Bar">
+        <img src="../img/casa-2.jpg" alt="foto">
     </div>
     <div class="boton-imagen boton-casa-suegra" onclick="openPopup('popup-casa-suegra')">
-        <img src="../img/imagen1.jpg" alt="Ir a la Casa de la Suegra">
+        <img src="../img/casa-3.png" alt="Ir a la Casa de la Suegra">
     </div>
-    <div class="boton-imagen boton-procu" onclick="openPopup('popup-procu')">
-        <img src="../img/si.jpg" alt="Ir a la Procuraduría">
+    <a href="procu.html" class="boton-imagen boton-procu">
+        <img src="../img/si.jpeg" alt="Ir a la Procuraduría">
+    </a>
+    <div id="Carmen" class="boton-imagen" onclick="showImageForSixSeconds('texto')">
+        <img src="../img/Carmen3.png" alt="Botón Carmen">
     </div>
-
+    
+    
     <!-- Pop-up Contenedores :D -->
     <div id="popup-calle" class="popup-container">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup-calle')">&times;</span>
-            <img src="../img/pop.jpg" alt="Detalle de Calle">
+            <img src="../img/Carrusel1.png" alt="Detalle de Calle">
+            <img src="../img/Carrusel2.jpg" alt="Detalle de Calle">
+            <img src="../img/Carrusel3.jpg" alt="Detalle de Calle">
         </div>
     </div>
+
 
     
     <div id="popup-bar" class="popup-container">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup-bar')">&times;</span>
-            <img src="../img/pop.jpg" alt="Detalle del Bar">
+            <!-- Reemplaza o complementa esta parte con audio -->
+            <audio controls>
+                <source src="../audio/lily.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
         </div>
     </div>
-
+    
     
     <div id="popup-casa-suegra" class="popup-container">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup-casa-suegra')">&times;</span>
-            <img src="../img/pop.jpg" alt="Detalle de Casa Suegra">
+            <img src="../img/suegra.png" alt="Detalle de Casa Suegra">
         </div>
     </div>
 
@@ -55,8 +66,9 @@
             <img src="../img/pop.jpg" alt="Detalle de la Procuraduría">
         </div>
     </div>
-
+    <img id="texto" src="../img/dialCasa.png" alt="Imagen Popup" style="display: none;">
 
     <script src="../js/popups.js"></script>
+   
 </body>
 </html>

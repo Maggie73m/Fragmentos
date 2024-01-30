@@ -8,30 +8,45 @@
 <body>
 
    
-    <img class="imagen-fondo" src="../img/fondo2.jpg" alt="Fondo">
+    <img class="imagen-fondo" src="../img/fondocalle.png" alt="Fondo">
 
     <!-- Botones de popups -->
     <div class="boton-imagen boton-calle" onclick="openPopup('popup-calle')">
-        <img src="../img/1.jpg" alt="Ir a la Calle">
+        <img src="../img/paraCalle.png" alt="Ir a la Calle"> <!-- cartel audio portesta-->
     </div>
-    <div class="boton-imagen boton-bar" onclick="openPopup('popup-bar')">
-        <img src="../img/fondo1.jpeg" alt="Ir al Bar">
-    </div>
+    <a href="bar.html" class="boton-imagen boton-bar">
+        <img src="../img/paraBar.png" alt="Ir al Bar">
+    </a>
     <div class="boton-imagen boton-casa-suegra" onclick="openPopup('popup-casa-suegra')">
-        <img src="../img/imagen1.jpg" alt="Ir a la Casa de la Suegra">
+        <img src="../img/calle-1.png" alt="Ir a la Casa de la Suegra">
     </div>
     <div class="boton-imagen boton-procu" onclick="openPopup('popup-procu')">
-        <img src="../img/si.jpg" alt="Ir a la Procuraduría">
+        <img src="../img/si.jpeg" alt="Ir a la Procuraduría">
     </div>
+    
+
+    <div id="Carmen" class="boton-imagen" onclick="showImageForSixSeconds('texto')">
+        <img src="../img/Carmen4.png" alt="Botón Carmen">
+    </div>
+    
+    <!-- Imagen "texto" que aparece como popup -->
+    <img id="texto" src="../img/dialCalle.png" alt="Imagen Popup" style="display: none;">
+  
+
 
     <!-- Pop-up Contenedores :D -->
     <div id="popup-calle" class="popup-container">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup-calle')">&times;</span>
-            <img src="../img/pop.jpg" alt="Detalle de Calle">
+            <!-- Reemplaza o complementa esta parte con audio -->
+            <audio controls>
+                <source src="../audio/protesta.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            
         </div>
     </div>
-
+    
     
     <div id="popup-bar" class="popup-container">
         <div class="popup-content">
@@ -44,7 +59,7 @@
     <div id="popup-casa-suegra" class="popup-container">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup-casa-suegra')">&times;</span>
-            <img src="../img/pop.jpg" alt="Detalle de Casa Suegra">
+            <img src="../img/calle-1.1.png" alt="Detalle de Casa Suegra">
         </div>
     </div>
 
@@ -52,7 +67,7 @@
     <div id="popup-procu" class="popup-container">
         <div class="popup-content">
             <span class="close-btn" onclick="closePopup('popup-procu')">&times;</span>
-            <img src="../img/pop.jpg" alt="Detalle de la Procuraduría">
+            <img src="../img/Manos.png" alt="Detalle de la Procuraduría">
         </div>
     </div>
 
